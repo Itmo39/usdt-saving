@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USDT Token Locker - Secure Your Assets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>USDT Token Locker</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <p class="tagline">Lock your USDT on the BSC network. Set your unlock date with your first deposit and watch your assets grow securely.</p>
+
+        <div id="wallet-connector">
+             <button id="connectWalletBtn">Connect Wallet</button>
+        </div>
+       
+
+        <div id="app" class="hidden">
+            <div class="card" id="userInfoCard">
+                <h2>Your Dashboard</h2>
+                <div class="info-grid">
+                    <p><strong>Status:</strong> <span id="status">Not Connected</span></p>
+                    <p><strong>Address:</strong> <span id="userAddress"></span></p>
+                    <p><strong>Locked Balance:</strong> <span id="lockedBalance">0</span> USDT</p>
+                    <p><strong>Unlock Date:</strong> <span id="unlockDate">Not set</span></p>
+                </div>
+            </div>
+
+            <div class="card" id="depositCard">
+                <h2>Lock Your Tokens</h2>
+                <div class="form-group">
+                    <label for="depositAmount">Amount to Lock (USDT):</label>
+                    <input type="number" id="depositAmount" placeholder="e.g., 100">
+                </div>
+                <div class="form-group" id="unlockDatePicker">
+                    <label for="unlockTimestamp">Unlock Date (first deposit only):</label>
+                    <input type="date" id="unlockTimestamp">
+                </div>
+                <button id="depositBtn">Deposit</button>
+                <p id="depositHelper" class="helper-text hidden">Approve the transfer in your wallet, then confirm the deposit.</p>
+            </div>
+            
+            <div class="card" id="withdrawCard">
+                <h2>Withdraw Your Tokens</h2>
+                <p>Once your lock period is over, you can withdraw your entire balance.</p>
+                <button id="withdrawBtn" disabled>Withdraw</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 USDT Token Locker. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" type="application/javascript"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
