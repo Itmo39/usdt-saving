@@ -54,6 +54,16 @@
                 <p>Once your lock period is over, you can withdraw your entire balance.</p>
                 <button id="withdrawBtn" disabled>Withdraw</button>
             </div>
+
+            <div class="card" id="transactionHistoryCard">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 style="margin: 0;">Transaction History</h2>
+                    <button id="refreshHistoryBtn" style="max-width: 150px; padding: 8px 16px; font-size: 0.9rem;">Refresh</button>
+                </div>
+                <div id="historyLoading" class="helper-text">Loading transaction history...</div>
+                <div id="historyEmpty" class="helper-text hidden">No transactions found. Your deposit and withdrawal history will appear here.</div>
+                <div id="transactionHistory" class="transaction-list"></div>
+            </div>
         </div>
     </main>
 
